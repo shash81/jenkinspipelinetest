@@ -12,9 +12,9 @@ pipeline {
                  echo  "this is Build stage"
             }
         }
-        stage()
+       
         parallel{
-        stages{
+       
         stage('Build Stage'){
             steps{
                  echo  "this is INIT stage"
@@ -24,9 +24,9 @@ pipeline {
             steps{
                  echo  "this is Build stage"
             }
-        }
         
-        }
+        
+        
         }
         }
 

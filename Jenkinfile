@@ -1,0 +1,17 @@
+pipeline {
+    agent: any
+
+    stages(){
+        stage('INIT stage'){
+            steps{
+                bat ' echo  "this is INIT stage"'
+            }
+        }
+        stage('Build stage'){
+            steps{
+                bat ' echo  "this is Build stage"'
+            }
+        }
+
+    }
+}

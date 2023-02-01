@@ -13,6 +13,7 @@ pipeline {
             }
         }
        
+       stage('parallel'){
         parallel{       
         stage('Build Stage'){
             steps{
@@ -25,6 +26,7 @@ pipeline {
             }   
         
         
+        }
         }
         }
 

@@ -2,15 +2,28 @@ pipeline {
     agent any
 
     stages(){
-        stage('INIT stage'){
+        stage('INIT Stage'){
             steps{
                  echo  "this is INIT stage"
             }
         }
-        stage('Build stage'){
+        stage('Build Stage'){
             steps{
                  echo  "this is Build stage"
             }
+        }
+        parallel{
+        stage('Build Stage'){
+            steps{
+                 echo  "this is INIT stage"
+            }
+        }
+        stage('Test Stage'){
+            steps{
+                 echo  "this is Build stage"
+            }
+        }
+        
         }
 
     }

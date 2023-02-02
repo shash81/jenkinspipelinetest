@@ -14,14 +14,14 @@ pipeline {
         }
        
      
-        parallel
-        build:{ stage('Build Stage'){
+        parallel(
+        'build':{ stage('Build Stage'){
             steps{
                  echo  "this is INIT stage"
             }
         }
         },
-        test:{
+        'test':{
         stage('Test Stage'){
             steps{
                  echo  "this is Build stage"
@@ -29,7 +29,7 @@ pipeline {
         
         
         }
-        }
+        })
         }
 
     }

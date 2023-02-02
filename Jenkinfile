@@ -14,7 +14,7 @@ pipeline {
         }
        
      
-        parallel{
+        parallel
         build:{ stage('Build Stage'){
             steps{
                  echo  "this is INIT stage"
@@ -28,7 +28,7 @@ pipeline {
             }   
         
         
-        }}
+        }
         }
         }
 

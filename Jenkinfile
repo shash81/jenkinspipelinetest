@@ -13,20 +13,22 @@ pipeline {
             }
         }
        
-       stage('parallel'){
-        parallel{       
-        stage('Build Stage'){
+     
+        parallel{
+        build:{ stage('Build Stage'){
             steps{
                  echo  "this is INIT stage"
             }
         }
+        },
+        test:{
         stage('Test Stage'){
             steps{
                  echo  "this is Build stage"
             }   
         
         
-        }
+        }}
         }
         }
 
